@@ -1,15 +1,19 @@
  //Global Variables
  color red= #FC4040;
- color black=#000000;
+ color black= #000000;
  color white = #FFFFFF;
+ color green = #47FAA2;
 PImage fai_iconi;
 PGraphics fai_icong;
 String fai_filename;
 PImage bg;
 int y;
+PImage photo;
 
- 
+
  void setup (){
+   photo = loadImage("images33.jpg");   
+   musicPlayerGUI_Setup();
     minim = new Minim(this); //load from data directory, loadFile should also load from project folder
   song[0] = minim.loadFile("Cycles.mp3");
   song[1] = minim.loadFile("Sunrise_Drive.mp3");
@@ -20,7 +24,7 @@ int y;
   println("Press P to Play and Pause");
   size(500,600);
   strokeWeight(6);
-  fill(red);// (#FC4040)
+  fill(green);// (#47FAA2)
   rect( 50, 50, 400, 500, 10);// Outer Rectangle
   fill(black);//(#000000)
   line(50,90,450,90);
